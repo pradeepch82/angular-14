@@ -315,7 +315,11 @@ Angular Custom Pipes
 gender|gender      :1=>Male ,2=>Female, 3=>Not disclosed
 
 
-gender|gender1    =>1 =Mr.  2=>Ms.  3.    
+gender|title    =>       gender=1 and isMarried=false      => Mr.
+                                 gender=1 and isMarried=true       =>  Mr. 
+                                 gender=2 and isMarried=false     =>  Miss
+                                 gender=2 and isMarried=true      =>   Mrs.
+
 
 
 employees|orderBy   =>       sort employees on id basis in ascending order
@@ -403,7 +407,7 @@ Angular Services  (Reusbale business logic)
 Angular provides builtin HttpClient service available in  HttpClientModule  (@angular/common/http) to invoke remote service.
 
 
-Fake Rest fual Web API
+Fake Restful Web API
 ========================
 
 https://jsonplaceholder.typicode.com/users            GET
@@ -448,8 +452,8 @@ constructor(private us:UsersService,private route:ActivatedRoute) {
   }
 
 
-Route Param
-===========
+Route Param/PathParam/PathVariable
+==================================
 
 https://jsonplaceholder.typicode.com/users/1
 https://jsonplaceholder.typicode.com/posts/1
@@ -464,7 +468,7 @@ https://jsonplaceholder.typicode.com/photos/1
 
         syntax:    this.userId=this.route.snapshot.params.userId;
 
-QueryParams
+QueryParams/QueryString
 ============
 
 https://jsonplaceholder.typicode.com/posts?userId=1
