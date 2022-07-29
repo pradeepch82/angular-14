@@ -219,7 +219,7 @@ directive  ->@Directive
 service    ->@Injectable
 
 
-Angular Directives  :add functionalities to HTML elements
+Angular Directives  : add functionalities to HTML elements
 ==========================================================
 
 Attribute Directve    :Won't change the HTML DOM structure
@@ -242,7 +242,6 @@ Component Directive
 <app-root>  </app-root>
 <ng-template></ng-template>
 <router-outlet><router-outlet>
-
 
 
 2.Custom Directives
@@ -480,6 +479,52 @@ https://jsonplaceholder.typicode.com/comments?postId=1
  syntax  :  this.userId=this.route.snapshot.queryParams.userId;
 
 
+Module level service
+
+=====================
+From Angular 5
+------------------------------------
+@Injectable({
+  providedIn: 'root'
+})
+export class UsersService {
+  constructor() { }
+}
+
+
+Before Angular 5
+---------------------------------------------------
+@Injectable()
+export class UsersService {
+  constructor() { }
+}
+
+
+import { UsersService } from './services/users.service';
+@NgModule({
+providers: [UsersService],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
+Component Level Service
+-----------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -492,6 +537,32 @@ Parent -> child   => @Input()
 
 Child ->   Parent  =>  @Output()  =>EventEmitter
      
+
+
+Country
+        name=""
+       stateName=""
+       cityName="" 
+        
+       State
+          name=""
+          countryName=""
+          cityName=""
+
+             City
+                 name=""    
+                 countryName=""
+                 stateName=""
+
+
+
+
+
+
+
+
+
+
  
  day5   18-July-2021
  =====
