@@ -1,0 +1,39 @@
+Angular PWA steps
+-----------------------------------------
+1)Create a Angular Project pwa
+
+            ng new pwa
+
+2) Traverse to Angular Project via command line
+
+            cd pwa
+
+3) Add the @angular/pwa package and observe uupdated file
+
+            ng add @angular/pwa
+ 
+4)Generate production build which will create dist/pwa folder
+
+            ng build
+
+5) Traverse to dist/pwa folder via command line
+
+        cd dist/pwa
+
+6)Install http-server globalay using npm
+
+         npm i -g http-server
+
+7)Server the application
+
+       http-server
+
+8) Visit the page http://localhost:8080
+
+
+https://medium.com/ngconf/angular-pwa-install-and-configure-858dd8e9fb07
+
+https://www.youtube.com/watch?v=UwtwOn4aX2w
+
+
+
